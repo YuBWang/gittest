@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>图片保存</title>
+</head>
+<body>
+<form action="/fileUpload" method="post" enctype="multipart/form-data">
+    <label>上传图片</label>
+    <input type="file" name="file1"/>
+    <input type="file" name="file2"/>
+    <input type="file" name="file3"/>
+    <input type="submit" value="上传"/>
+</form>
+<p>图片:</p>
+<!--<image th:src="@{${filename1 }}"></image>-->
+<div class="img_wp" οnclick="zhengmian()">
+    <p th:text="${filename1}">图片路径1</p>
+    <p>ccccccc</p>
+    <img th:src="@{${filename1}}" style="height: 84.6px;"/>
+    <p class="img_intro">身份证正面照</p>
+</div>
+<div class="img_wp" οnclick="fanmian()">
+    <p th:text="${filename2}">图片路径2</p>
+    <img th:src="@{${filename2}}" style="height: 84.6px;"/>
+    <p class="img_intro">身份证反面照</p>
+</div>
+<div class="img_wp" οnclick="disanmian()">
+    <p th:text="${filename3}">图片路径3</p>
+    <img th:src="@{${filename3}}" style="height: 84.6px;"/>
+    <p class="img_intro">身份证反面照</p>
+</div>
+
+</body>
+</html>
